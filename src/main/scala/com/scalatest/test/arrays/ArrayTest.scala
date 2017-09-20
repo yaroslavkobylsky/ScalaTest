@@ -1,5 +1,6 @@
-package com.scalatest.test
+package com.scalatest.test.arrays
 
+import scala.collection.mutable.ArrayBuffer
 import scala.util.Sorting
 
 object ArrayTest {
@@ -41,6 +42,9 @@ object ArrayTest {
     println();
     println((for (element <- array if (element % 2 == 0)) yield {2 * element;}).mkString(" "));
     println((array.filter(_ % 2 == 0).map(2 * _)).mkString(" "));
+
+    val ex4Array = Array(-2, 1, -5, 10, -125, 2, 15, 169);
+    println("ex 4 result: " + new Exercise4().exerciseSort(ex4Array).mkString(" "));
 
   }
 }
