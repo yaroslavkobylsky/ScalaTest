@@ -35,6 +35,24 @@ object Exercises{
     println("char sum with reduce left: " + list.reduceLeft(_ + _).length);
     println("reduce right: " + list.reduceRight(_ + _));
     println("drop while: " + list.dropWhile(_.length > 4).mkString(" "));
-    var list2 = List("one", "two", "three");
+
+    println("---------SET-----------")
+    var set = Set("one", "two", "three", "four", "five", "six", "seven");
+    println("set: " + set.mkString(" "));
+    println("set with filter: " + set.filter(_.length > 3).mkString(" "));
+    println("set with filter: " + set.filter(_ > "five").mkString(" "));
+    println("set is contain: " + set.contains("one"));
+    println("set drop: " + set.drop(2).mkString(" "));
+    println("set for each: " + set.foreach(print(_)));
+    println("set map: " + set.map(_ + "___").mkString(" "));
+    println("set flat map: " + set.flatMap(_.distinct.toUpperCase).mkString(" "));
+    var set2 = Set("one", "two", "three");
+    var set3 = Set("eight", "nine", "ten");
+    println("set add to set: " + (set ++ set3).mkString(" "));
+    println("set sub from set: " + (set -- set2).mkString(" "));
+    println("set & set: " + (set & set2).mkString(" "));
+    println("set || set: " + (set | set3).mkString(" "));
+    println("set zip set: " + (set zip(set3)).mkString(" "));
+    println("set zip set: " + (set zip(set2)).mkString(" "));
   }
 }
