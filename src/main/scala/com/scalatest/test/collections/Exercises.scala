@@ -54,5 +54,14 @@ object Exercises{
     println("set || set: " + (set | set3).mkString(" "));
     println("set zip set: " + (set zip(set3)).mkString(" "));
     println("set zip set: " + (set zip(set2)).mkString(" "));
+
+    println("---------MAP-----------")
+    val map = Map("one" -> 1, "two" -> 2, "three" -> 3, "four" -> 4, "five" -> 5, "six" -> 6, "seven" -> 7);
+    println("map: " + map.mkString(" | "));
+    println("map get: " + map.getOrElse("one", 0).toString);
+    println("map contains: " + map.contains("one"));
+    println("map drop right: " + map.dropRight(2));
+    println("map drop left: " + map.drop(2));
+    def dropWhileMap(string: String, int: Int): Boolean = {string.length >3};
   }
 }
